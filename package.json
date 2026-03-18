@@ -1,0 +1,28 @@
+{
+  "name": "fibonacci-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengleman-spec/fibonacci-exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lengleman-spec/fibonacci-exercise/issues"
+  },
+  "homepage": "https://github.com/lengleman-spec/fibonacci-exercise#readme",
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2"
+  }
+}
