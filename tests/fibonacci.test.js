@@ -1,4 +1,4 @@
-import { fibs, fibsRec } from "../src/fibonacci";
+import { fibs, fibsRec } from "../src/fibonacci.js";
 
 // Description, then function to check
 // For iterative function:
@@ -12,10 +12,9 @@ test("recursive fibonacci returns correct array", () => {
 });
 
 // Testing for edge cases (small input)
-(test("handles small input"),
-  () => {
-    expect(fibs(1)).toEqual([0]);
-    expect(fibsRec(1)).toEqual([0]);
-    expect(fibs(0)).toEqual([]);
-    expect(fibsRec(0)).toEqual([]);
-  });
+test("handles small input", () => {
+  expect(fibs(1)).toEqual([0]);
+  expect(fibsRec(1)).toEqual([0]);
+  expect(fibs(0)).toEqual([]);
+  expect(fibsRec(0)).toEqual([]);
+});

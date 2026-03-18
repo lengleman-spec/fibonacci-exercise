@@ -21,3 +21,17 @@ export function fibs(n) {
 
   return result;
 }
+
+// Recursive function
+export function fibsRec(n) {
+  if (n <= 0) return []; // No numbers
+  if (n === 1) return [0]; // First number
+  if (n === 2) return [0, 1]; // Two numbers
+
+  const prev = fibsRec(n - 1);
+
+  // prev[prev - 1] = the last number in the array
+  // prev[prev - 2] = the second to last number in the array
+  const next = prev[prev.length - 1] + prev[prev.length - 2];
+  return [...prev, next];
+}
