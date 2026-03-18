@@ -1,8 +1,6 @@
 import { merge } from "./merge.js";
 
 export function mergeSort(arr) {
-  console.log("This was printed recursively");
-
   // Base case: if array has 0 or 1 element, it's already sorted
   if (arr.length <= 1) return arr;
 

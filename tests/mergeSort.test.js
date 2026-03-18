@@ -16,7 +16,7 @@ test("mergeSort works on already sorted array", () => {
 
 test("mergeSort works on unsorted array", () => {
   expect(mergeSort([3, 2, 1, 13, 8, 5, 0, 1])).toEqual([
-    3, 2, 1, 13, 8, 5, 0, 1,
+    0, 1, 1, 2, 3, 5, 8, 13,
   ]);
 
   expect(mergeSort([105, 79, 100, 110])).toEqual([79, 100, 105, 110]);
