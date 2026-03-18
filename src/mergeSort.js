@@ -1,18 +1,20 @@
-function merge(left, right) {
-  const result = [];
-  let i = 0; // Left
-  let j = 0; // Right
+import { merge } from "./merge.js";
 
-  while (i < left.length && j < right.length) {
-    // If left element is smaller than right, push value into the result array
-    if (left[i] < right[j]) {
-      result.push(left[i]);
-      i++;
-    } else {
-      result.push(right[j]);
-      j++;
-    }
-  }
+export function mergeSort(arr) {
+  console.log("This was printed recursively");
 
-  return result.concat(left.slice(i)).concat(right.slice(j));
+  // Base case: if array has 0 or 1 element, it's already sorted
+  if (arr.length <= 1) return arr;
+
+  // Use Math.floor() so that if the array is odd, the left half is <= the right half
+  const mid = Math.floor(arr.length / 2);
+  // Creates a new array from index 0 and up
+  const left = arr.slice(0, mid);
+  // Creates a new array from mid to end of array
+  const right = arr.slice(mid);
+
+  const sortedLeft = mergeSort(left);
+  const sortedRight = mergeSort(right);
+
+  return merge(sortedLeft, sortedRight);
 }
